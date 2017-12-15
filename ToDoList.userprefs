@@ -1,7 +1,9 @@
 ﻿<Properties StartupConfiguration="{E999679F-81F6-4B10-ADC2-82D35C856DA0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList/.gitignore">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList/Program.cs">
     <Files>
       <File FileName="ToDoList/.gitignore" Line="3" Column="1" />
+      <File FileName="ToDoList/Startup.cs" Line="47" Column="16" />
+      <File FileName="ToDoList/Program.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
