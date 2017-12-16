@@ -1,13 +1,16 @@
 ﻿<Properties StartupConfiguration="{E999679F-81F6-4B10-ADC2-82D35C856DA0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList/Controllers/ItemsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList/Views/Items/Edit.cshtml">
     <Files>
       <File FileName="ToDoList/Views/Items/Delete.cshtml" Line="19" Column="1" />
-      <File FileName="ToDoList/Views/Items/Index.cshtml" Line="14" Column="30" />
+      <File FileName="ToDoList/Views/Items/Index.cshtml" Line="33" Column="5" />
       <File FileName="ToDoList/Controllers/CategoriesController.cs" Line="1" Column="1" />
       <File FileName="ToDoList/Models/Category.cs" Line="15" Column="14" />
       <File FileName="ToDoList/Models/ToDoListDbContext.cs" Line="8" Column="9" />
       <File FileName="ToDoList/Models/Item.cs" Line="13" Column="9" />
-      <File FileName="ToDoList/Controllers/ItemsController.cs" Line="50" Column="10" />
+      <File FileName="ToDoList/Controllers/ItemsController.cs" Line="26" Column="38" />
+      <File FileName="ToDoList/Views/Items/Details.cshtml" Line="13" Column="111" />
+      <File FileName="ToDoList/Views/Items/Create.cshtml" Line="21" Column="42" />
+      <File FileName="ToDoList/Views/Items/Edit.cshtml" Line="11" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
