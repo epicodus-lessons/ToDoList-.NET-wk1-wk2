@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "Castle.Core/4.2.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.TraceSource": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -1711,6 +1732,21 @@
           }
         }
       },
+      "Moq/4.7.145": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "4.2.1",
+          "NETStandard.Library": "1.6.1",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Moq.dll": {}
+        }
+      },
       "MSTest.TestAdapter/1.1.17": {
         "type": "package",
         "dependencies": {
@@ -2174,7 +2210,7 @@
           "System.Threading": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Collections.Specialized.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
@@ -3169,7 +3205,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.1/_._": {}
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.dll": {}
@@ -3183,7 +3219,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.ILGeneration.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.ILGeneration.dll": {}
@@ -4115,6 +4151,27 @@
     }
   },
   "libraries": {
+    "Castle.Core/4.2.1": {
+      "sha512": "XSNA0Gc1Zu33L+8+/3Tqt+aFu8QWS8UenVHZ7RenIP5wJfhoLrA4PnNscpxReeo5aBq8PDoGnV8rNaOzIOUo/w==",
+      "type": "package",
+      "path": "castle.core/4.2.1",
+      "files": [
+        "ASL - Apache Software Foundation License.txt",
+        "CHANGELOG.md",
+        "LICENSE",
+        "castle.core.4.2.1.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/net35/Castle.Core.dll",
+        "lib/net35/Castle.Core.xml",
+        "lib/net40/Castle.Core.dll",
+        "lib/net40/Castle.Core.xml",
+        "lib/net45/Castle.Core.dll",
+        "lib/net45/Castle.Core.xml",
+        "lib/netstandard1.3/Castle.Core.dll",
+        "lib/netstandard1.3/Castle.Core.xml",
+        "readme.txt"
+      ]
+    },
     "Libuv/1.9.1": {
       "sha512": "182Q1oITqD63UidX5Ti+Dw8zv4/C1EyML3dJO7jjyAxgGDTfQxq7r1jqs+AMkMumm/9mHoDlSH0L/F7eCxXBvg==",
       "type": "package",
@@ -5506,6 +5563,21 @@
         "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/netcore50/_._",
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
+      ]
+    },
+    "Moq/4.7.145": {
+      "sha512": "GeYAyZPx+9RZxSQYNj0Vh3nmO/Oq/dGdHfy0UxGLSo657fGNLhUWYyqLsb2pf7yHmkc3WfYkTbzFKPTR9lk5Vw==",
+      "type": "package",
+      "path": "moq/4.7.145",
+      "files": [
+        "lib/net45/Moq.dll",
+        "lib/net45/Moq.pdb",
+        "lib/net45/Moq.xml",
+        "lib/netstandard1.3/Moq.dll",
+        "lib/netstandard1.3/Moq.pdb",
+        "lib/netstandard1.3/Moq.xml",
+        "moq.4.7.145.nupkg.sha512",
+        "moq.nuspec"
       ]
     },
     "MSTest.TestAdapter/1.1.17": {
@@ -10872,6 +10944,7 @@
       "MSTest.TestFramework >= 1.1.17",
       "Microsoft.NET.Test.Sdk >= 15.3.0-preview-20170427-09",
       "Microsoft.NETCore.App >= 1.1.2",
+      "Moq >= 4.7.145",
       "ToDoList >= 1.0.0"
     ]
   },
@@ -10932,6 +11005,10 @@
           "MSTest.TestFramework": {
             "target": "Package",
             "version": "1.1.17"
+          },
+          "Moq": {
+            "target": "Package",
+            "version": "4.7.145"
           }
         }
       }
