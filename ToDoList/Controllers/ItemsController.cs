@@ -10,24 +10,23 @@ using ToDoList.Models;
 
 namespace ToDoList.Controllers
 {
-    public class ItemController : Controller
+    public class ItemsController : Controller
     {
         private ToDoListDbContext db = new ToDoListDbContext();
-
         public IActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.Items.Include(items => items.Category).ToList());
         }
         public IActionResult Details(int id)
         {
-            Item thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
+            var thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
             return View(thisItem);
         }
         public IActionResult Create()
         {
+            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name");
             return View();
         }
-
         [HttpPost]
         public IActionResult Create(Item item)
         {
@@ -38,9 +37,9 @@ namespace ToDoList.Controllers
         public IActionResult Edit(int id)
         {
             var thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
+            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name");
             return View(thisItem);
         }
-
         [HttpPost]
         public IActionResult Edit(Item item)
         {
@@ -48,12 +47,11 @@ namespace ToDoList.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public IActionResult Delete(int id)
+        public ActionResult Delete(int id)
         {
             var thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
             return View(thisItem);
         }
-
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
