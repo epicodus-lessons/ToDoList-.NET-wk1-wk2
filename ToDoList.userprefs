@@ -1,12 +1,8 @@
 ﻿<Properties StartupConfiguration="{E999679F-81F6-4B10-ADC2-82D35C856DA0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList.Tests/ControllerTests/ItemsControllersTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList.Tests/ModelTests/ItemTests.cs">
     <Files>
-      <File FileName="ToDoList/Views/Items/Delete.cshtml" Line="16" Column="45" />
-      <File FileName="ToDoList.Tests/ModelTests/ItemTests.cs" Line="23" Column="1" />
-      <File FileName="ToDoList/Controllers/ItemsController.cs" Line="19" Column="22" />
-      <File FileName="ToDoList.Tests/ControllerTests/ItemsControllersTests.cs" Line="58" Column="1" />
-      <File FileName="ToDoList/Models/Item.cs" Line="22" Column="68" />
-      <File FileName="ToDoList/Models/Repositories/IItemRepository.cs" Line="16" Column="1" />
+      <File FileName="ToDoList.Tests/ControllerTests/ItemsControllersTests.cs" Line="20" Column="14" />
+      <File FileName="ToDoList.Tests/ModelTests/ItemTests.cs" Line="9" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
@@ -16,9 +12,7 @@
               <Node name="ToDoList" expanded="True">
                 <Node name="Tests" expanded="True">
                   <Node name="ControllerTests" expanded="True">
-                    <Node name="ItemsControllerTests" expanded="True">
-                      <Node name="Mock_IndexModelContainsItems_Collection" selected="True" />
-                    </Node>
+                    <Node name="ItemsControllerTests" expanded="True" />
                   </Node>
                 </Node>
               </Node>

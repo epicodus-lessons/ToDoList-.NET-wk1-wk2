@@ -22,8 +22,8 @@ namespace ToDoList.Tests.ControllerTests
                 new Item {ItemId = 2, Description = "Do the dishes" },
                 new Item {ItemId = 3, Description = "Sweep the floor" }
             }.AsQueryable());
-        }
 
+        }
 
         [TestMethod]
         public void Mock_GetViewResultIndex_ActionResult() // Confirms route returns view
