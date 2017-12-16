@@ -1,7 +1,9 @@
 ﻿<Properties StartupConfiguration="{E999679F-81F6-4B10-ADC2-82D35C856DA0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList/Views/Items/Delete.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList.Tests/ModelTests/ItemTests.cs">
     <Files>
-      <File FileName="ToDoList/Views/Items/Delete.cshtml" Line="15" Column="49" />
+      <File FileName="ToDoList/Views/Items/Delete.cshtml" Line="16" Column="45" />
+      <File FileName="ToDoList.Tests/ModelTests/ItemTests.cs" Line="22" Column="2" />
+      <File FileName="ToDoList/Controllers/ItemsController.cs" Line="32" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
