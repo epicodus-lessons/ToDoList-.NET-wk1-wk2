@@ -5,6 +5,7 @@ using ToDoList.Models;
 using ToDoList.Controllers;
 using Moq;
 using System.Linq;
+using ToDoList.Tests.Models;
 
 namespace ToDoList.Tests.ControllerTests
 {
@@ -13,16 +14,16 @@ namespace ToDoList.Tests.ControllerTests
     public class ItemsControllerTests
     {
         Mock<IItemRepository> mock = new Mock<IItemRepository>();
+        EFItemRepository db = new EFItemRepository(new TestDbContext());
 
         private void DbSetup()
         {
             mock.Setup(m => m.Items).Returns(new Item[]
             {
-                new Item {ItemId = 1, Description = "Wash the dog" },
-                new Item {ItemId = 2, Description = "Do the dishes" },
-                new Item {ItemId = 3, Description = "Sweep the floor" }
+                new Item {Id = 1, Description = "Wash the dog" },
+                new Item {Id = 2, Description = "Do the dishes" },
+                new Item {Id = 3, Description = "Sweep the floor" }
             }.AsQueryable());
-
         }
 
         [TestMethod]
@@ -61,11 +62,26 @@ namespace ToDoList.Tests.ControllerTests
             ItemsController controller = new ItemsController(mock.Object);
             Item testItem = new Item();
             testItem.Description = "Wash the dog";
-            testItem.ItemId = 1;
+            testItem.Id = 1;
 
             // Act
             ViewResult indexView = controller.Index() as ViewResult;
             List<Item> collection = indexView.ViewData.Model as List<Item>;
+
+            // Assert
+            CollectionAssert.Contains(collection, testItem);
+        }
+        [TestMethod]
+        public void DB_CreatesNewEntries_Collection()
+        {
+            // Arrange
+            ItemsController controller = new ItemsController(db);
+            Item testItem = new Item();
+            testItem.Description = "TestDb Item";
+
+            // Act
+            controller.Create(testItem);
+            var collection = (controller.Index() as ViewResult).ViewData.Model as List<Item>;
 
             // Assert
             CollectionAssert.Contains(collection, testItem);

@@ -12,13 +12,16 @@ namespace ToDoList.Controllers
     {
         private IItemRepository itemRepo;  // New!
 
-        public ItemsController()
+        public ItemsController(IItemRepository repo = null)
         {
-            itemRepo = new EFItemRepository();
-        }
-        public ItemsController(IItemRepository repo)
-        {
-            itemRepo = repo;
+            if(repo == null)
+            {
+                this.itemRepo = new EFItemRepository();
+            }
+            else
+            {
+                this.itemRepo = repo;
+            }
         }
 
         public ViewResult Index()
@@ -30,7 +33,7 @@ namespace ToDoList.Controllers
         public IActionResult Details(int id)
         {
             // Updated:
-            Item thisItem = itemRepo.Items.FirstOrDefault(x => x.ItemId == id);
+            Item thisItem = itemRepo.Items.FirstOrDefault(x => x.Id == id);
             return View(thisItem);
         }
 
@@ -50,7 +53,7 @@ namespace ToDoList.Controllers
         public IActionResult Edit(int id)
         {
             // Updated:
-            Item thisItem = itemRepo.Items.FirstOrDefault(x => x.ItemId == id);
+            Item thisItem = itemRepo.Items.FirstOrDefault(x => x.Id == id);
             return View(thisItem);
         }
 
@@ -64,7 +67,7 @@ namespace ToDoList.Controllers
         public IActionResult Delete(int id)
         {
             // Updated:
-            Item thisItem = itemRepo.Items.FirstOrDefault(x => x.ItemId == id);
+            Item thisItem = itemRepo.Items.FirstOrDefault(x => x.Id == id);
             return View(thisItem);
         }
 
@@ -72,7 +75,7 @@ namespace ToDoList.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             // Updated:
-            Item thisItem = itemRepo.Items.FirstOrDefault(x => x.ItemId == id);
+            Item thisItem = itemRepo.Items.FirstOrDefault(x => x.Id == id);
             itemRepo.Remove(thisItem);   // Updated!
             // Removed db.SaveChanges() call
             return RedirectToAction("Index");

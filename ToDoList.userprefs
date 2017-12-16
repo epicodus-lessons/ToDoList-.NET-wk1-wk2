@@ -1,8 +1,15 @@
 ﻿<Properties StartupConfiguration="{E999679F-81F6-4B10-ADC2-82D35C856DA0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList.Tests/ModelTests/ItemTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList.Tests/ControllerTests/ItemsControllersTests.cs">
     <Files>
-      <File FileName="ToDoList.Tests/ControllerTests/ItemsControllersTests.cs" Line="20" Column="14" />
-      <File FileName="ToDoList.Tests/ModelTests/ItemTests.cs" Line="9" Column="1" />
+      <File FileName="ToDoList.Tests/ModelTests/ItemTests.cs" Line="8" Column="6" />
+      <File FileName="ToDoList/Models/Repositories/EFItemRepository.cs" Line="7" Column="26" />
+      <File FileName="ToDoList/Models/ToDoListDbContext.cs" Line="9" Column="24" />
+      <File FileName="ToDoList/Controllers/ItemsController.cs" Line="11" Column="16" />
+      <File FileName="ToDoList/Models/Repositories/IItemRepository.cs" Line="9" Column="6" />
+      <File FileName="ToDoList/Models/Item.cs" Line="10" Column="20" />
+      <File FileName="ToDoList/Views/Items/Index.cshtml" Line="14" Column="256" />
+      <File FileName="ToDoList.Tests/Models/TestDbContext.cs" Line="16" Column="1" />
+      <File FileName="ToDoList.Tests/ControllerTests/ItemsControllersTests.cs" Line="16" Column="150" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
@@ -12,7 +19,9 @@
               <Node name="ToDoList" expanded="True">
                 <Node name="Tests" expanded="True">
                   <Node name="ControllerTests" expanded="True">
-                    <Node name="ItemsControllerTests" expanded="True" />
+                    <Node name="ItemsControllerTests" expanded="True">
+                      <Node name="DB_CreatesNewEntries_Collection" selected="True" />
+                    </Node>
                   </Node>
                 </Node>
               </Node>
