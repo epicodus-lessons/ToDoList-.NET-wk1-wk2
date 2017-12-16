@@ -10,7 +10,7 @@ namespace ToDoList.Tests
         public void GetDescription_ReturnsItemDescription_String()
         {
             //Arrange
-            var item = new Item();
+            var item = new Item("Wash the dog");
 
             //Act
             var result = item.Description;
