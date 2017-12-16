@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{E999679F-81F6-4B10-ADC2-82D35C856DA0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList/Views/Items/Edit.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="ToDoList/Views/Items/Delete.cshtml" Line="19" Column="1" />
+      <File FileName="ToDoList/Views/Items/Delete.cshtml" Line="15" Column="49" />
       <File FileName="ToDoList/Views/Items/Index.cshtml" Line="33" Column="5" />
       <File FileName="ToDoList/Controllers/CategoriesController.cs" Line="1" Column="1" />
       <File FileName="ToDoList/Models/Category.cs" Line="15" Column="14" />
@@ -11,6 +11,7 @@
       <File FileName="ToDoList/Views/Items/Details.cshtml" Line="13" Column="111" />
       <File FileName="ToDoList/Views/Items/Create.cshtml" Line="21" Column="42" />
       <File FileName="ToDoList/Views/Items/Edit.cshtml" Line="11" Column="2" />
+      <File FileName="ToDoList/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
