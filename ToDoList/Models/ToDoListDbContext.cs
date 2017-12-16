@@ -6,7 +6,8 @@ namespace ToDoList.Models
     public class ToDoListDbContext : DbContext
     {
 
-        public DbSet<Item> Items { get; set; }
+        public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder

@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{E999679F-81F6-4B10-ADC2-82D35C856DA0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList/Models/Category.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoList/Models/ToDoListDbContext.cs">
     <Files>
       <File FileName="ToDoList/Views/Items/Delete.cshtml" Line="19" Column="1" />
       <File FileName="ToDoList/Views/Items/Index.cshtml" Line="14" Column="30" />
       <File FileName="ToDoList/Controllers/CategoriesController.cs" Line="1" Column="1" />
-      <File FileName="ToDoList/Models/Category.cs" Line="1" Column="1" />
+      <File FileName="ToDoList/Models/Category.cs" Line="15" Column="14" />
+      <File FileName="ToDoList/Models/ToDoListDbContext.cs" Line="11" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
