@@ -9,7 +9,7 @@ namespace ToDoList.Tests.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySql(@"server = localhost; user id = root; password = root; port = 8889; database = todo_test; ");
+            options.UseMySql(@"Server = localhost; Port = 8889; database = todo_test; uid = root; pwd = root;");
         }
     }
 }

@@ -86,5 +86,47 @@ namespace ToDoList.Tests.ControllerTests
             // Assert
             CollectionAssert.Contains(collection, testItem);
         }
+        [TestMethod]
+        public void Mock_GetViewResultCreate_ViewResult()
+        {
+            // Arrange
+            Item testItem = new Item
+            {
+                Id = 1,
+                Description = "Wash the dog"
+            };
+
+            DbSetup();
+            ItemsController controller = new ItemsController(mock.Object);
+
+            // Act
+            var resultView = controller.Create(testItem) as ViewResult;
+
+
+            // Assert
+            Assert.IsInstanceOfType(resultView, typeof(ViewResult));
+
+        }
+        [TestMethod]
+        public void Mock_GetDetails_ReturnsView()
+        {
+            // Arrange
+            Item testItem = new Item
+            {
+                Id = 1,
+                Description = "Wash the dog"
+            };
+
+            DbSetup();
+            ItemsController controller = new ItemsController(mock.Object);
+
+            // Act
+            var resultView = controller.Details(testItem.Id) as ViewResult;
+            var item = resultView.ViewData.Model as Item;
+
+            // Assert
+            Assert.IsInstanceOfType(resultView, typeof(ViewResult));
+            Assert.IsInstanceOfType(item, typeof(Item));
+        }
     }
 }
